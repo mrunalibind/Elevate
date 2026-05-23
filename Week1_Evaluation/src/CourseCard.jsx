@@ -3,7 +3,14 @@ import { Link } from 'react-router-dom'
 
 const CourseCard = ({course, addToSaved}) => {
   return (
-    <div>
+    <div style={{
+        backgroundColor: "#dcdcdc",
+        padding: "10px",
+        borderRadius: "5px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between"
+    }}>
         <h3>{course.title}</h3>
         <p>Category: {course.category}</p>
         <p>Duration: {course.duration}</p>
@@ -11,7 +18,14 @@ const CourseCard = ({course, addToSaved}) => {
         <div>
             <Link to={`/courses/${course.id}`}>View Details</Link>
         </div>
-        <button onClick={()=>addToSaved(course)}>Save Course</button>
+        <button style={{
+            backgroundColor: "#6d9aca",
+            padding: "5px",
+            marginTop: "10px",
+            borderRadius: "5px",
+            cursor: "pointer"
+            
+        }} onClick={()=>addToSaved(course)}>Save Course</button>
     </div>
   )
 }
