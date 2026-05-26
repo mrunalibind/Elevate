@@ -11,7 +11,7 @@ const CourseCard = ({course, addToSaved}) => {
         flexDirection: "column",
         justifyContent: "space-between"
     }}>
-        <h3>{course.title}</h3>
+        <h3>{course.name}</h3>
         <p>Category: {course.category}</p>
         <p>Duration: {course.duration}</p>
         <p>Level: {course.level}</p>

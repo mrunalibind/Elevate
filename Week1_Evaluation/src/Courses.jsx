@@ -88,7 +88,7 @@ const Courses = ({ addToSaved }) => {
     }
 
     const filteredCourses = useMemo(() => {
-        return coursesData.filter(course =>{ 
+        return coursesData.filter(course => {
             const matchSearch = course.name.toLowerCase().includes(searchText.toLowerCase())
             const matchCategory = selectedCategory === "All" || course.category.toLowerCase() === selectedCategory.toLowerCase()
             return matchSearch && matchCategory;
@@ -133,11 +133,11 @@ const Courses = ({ addToSaved }) => {
                 gap: "30px",
                 margin: "20px"
             }}>
-                {filteredCourses.length> 0 ? (
-                    filteredCourses.map((course)=>(
-                        <CourseCard key={course.id} course={course} addToSaved={addToSaved}/>
+                {filteredCourses.length > 0 ? (
+                    filteredCourses.map((course) => (
+                        <CourseCard key={course.id} course={course} addToSaved={addToSaved} />
                     ))
-                ):(
+                ) : (
                     <p>No courses matched</p>
                 )}
             </div>
