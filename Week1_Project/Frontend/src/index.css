@@ -1,0 +1,64 @@
+:root {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #f5f7fb;
+  color: #111827;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.04), transparent 30%),
+              radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.03), transparent 28%),
+              #f5f7fb;
+  color: #111827;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+body.theme-dark {
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.04), transparent 28%),
+              radial-gradient(circle at bottom right, rgba(52, 211, 153, 0.03), transparent 26%),
+              #0f172a;
+  color: #e5e7eb;
+}
+
+body, .app-shell {
+  min-height: 100vh;
+}
