@@ -1,10 +1,11 @@
-import { Post } from "../models/post_model"
+import { Post } from "../models/post_model.js"
 
 export const createPost = async(req, res) => {
     try {
+        
         const post = await Post.create({
             ...req.body,
-            author: req.body.id
+            author: req.user.id
         });
         res.status(200).json({
             success: true,
@@ -25,7 +26,7 @@ export const getAllPost = async (req, res) => {
 
         const total  = await Post.countDocuments();
 
-        const posts = await Post.find().populate("author", "name, email").skip(skip).limit(limit);
+        const posts = await Post.find().populate("author", "name email").skip(skip).limit(limit);
         res.status(200).json({
             total,
             page, 
@@ -57,3 +58,18 @@ export const getPostById = async(req, res) => {
     }
 }
 
+export const updatePost = async(req, res) => {
+    try {
+        
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+
+export const deletePost = async(req, res) => {
+    try {
+        
+    } catch (error) {
+        console.log(error.message);
+    }
+}

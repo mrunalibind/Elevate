@@ -8,12 +8,10 @@ const postSchema = mongoose.Schema({
     content: {
         type: String,
         required: true,
-        unique: true
     },
     author : {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "user",
-        required: true,
+        ref: "User",
     },
     tags: [{
         type: String
